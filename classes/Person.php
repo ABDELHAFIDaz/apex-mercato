@@ -1,7 +1,9 @@
 <?php
 abstract class Person{
-    protected string $firstName;
-    protected string $lastName;
-    protected string $email;
-    protected string $nationality;
+    
+    public function __construct(
+        protected string $name,
+        protected string $email,
+        protected string $nationality
+    ){}
 }

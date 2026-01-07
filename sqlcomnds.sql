@@ -4,9 +4,9 @@ use apex_manager;
 -- persons table 
 create table persons( 
     id int AUTO_INCREMENT PRIMARY key,
-    last_name varchar(50) not null,
-    first_name varchar(50) not null,
-    birthday date
+    name varchar(50) not null,
+    email varchar(255) not null unique,
+    nationality varchar(50)
 );
 -- teams table
 create table teams (
@@ -58,7 +58,11 @@ CREATE TABLE transfers(
     CONSTRAINT fk_current_team FOREIGN KEY (current_team_id) REFERENCES teams(id),
     CONSTRAINT fk_new_team FOREIGN KEY (new_team_id) REFERENCES teams(id)
 );
--- some changes in persons table
-alter table persons drop column birthday;
-alter table persons add email varchar(255) not null;
-alter table persons add nationality varchar(100);
+-- table for teams and players
+create table team_player (
+    id int AUTO_INCREMENT PRIMARY KEY,
+    team_id int not null,
+    player_id int not null,
+    CONSTRAINT fk_team_id FOREIGN KEY (team_id) REFERENCES teams(id) ON DELETE CASCADE,
+    CONSTRAINT fk_player_id FOREIGN KEY (player_id) REFERENCES players(person_id) on delete cascade
+)
