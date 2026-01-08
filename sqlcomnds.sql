@@ -66,3 +66,11 @@ create table team_player (
     CONSTRAINT fk_team_id FOREIGN KEY (team_id) REFERENCES teams(id) ON DELETE CASCADE,
     CONSTRAINT fk_player_id FOREIGN KEY (player_id) REFERENCES players(person_id) on delete cascade
 )
+-- users table
+create table users (
+    id int AUTO_INCREMENT PRIMARY key,
+    name varchar(100) not null,
+    email varchar(255) not null unique,
+    password varchar(50) not null,
+    role ENUM('admin', 'journalist', 'visitor') not null
+);

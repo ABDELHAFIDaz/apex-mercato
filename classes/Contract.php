@@ -1,7 +1,10 @@
 <?php
 class Contract {
-    private float $salary;
-    private float $buybackClause;
-    private date $startDate;
-    private date $endDate;
+    
+    public function __construct(
+        private float $salary,
+        private float $buybackClause,
+        private dateTimeImmutable $startDate,
+        private dateTime $endDate
+    ){}
 }
