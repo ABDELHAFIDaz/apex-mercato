@@ -1,0 +1,163 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* ================= AUTH ================= */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-box {
+  background: #020617;
+  padding: 40px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.auth-box label {
+  margin-top: 10px;
+  display: block;
+  font-size: 14px;
+}
+
+.auth-box input,
+.auth-box select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  color: white;
+}
+
+.auth-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #020617;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.primary-btn {
+  background: #38bdf8;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ================= TABLE ================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+
+th {
+  background: #020617;
+  text-align: left;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #020617;
+  padding: 30px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.modal-box label {
+  margin-top: 10px;
+  display: block;
+}
+
+.modal-box input,
+.modal-box select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  color: white;
+}

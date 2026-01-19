@@ -49,7 +49,8 @@ elseif($_POST["login"]){
 
 }
 
-$_SESSION["id"] = $id;
+if($id != 0)
+    $_SESSION["id"] = $id;
 $_SESSION["role"] = $role;
 
 header("location: index.php");
